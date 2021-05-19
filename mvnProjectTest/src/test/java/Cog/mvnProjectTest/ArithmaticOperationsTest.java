@@ -21,18 +21,18 @@ public class ArithmaticOperationsTest
 
 	@Before
 	public void beforeEachTest() {
-		System.out.println("This is executed before each Test");
+		//System.out.println("This is executed before each Test");
 	}
 
 	@After
 	public void afterEachTest() {
-		System.out.println("This is exceuted after each Test");
+		//System.out.println("This is exceuted after each Test");
 	}
 
 	@Test
 	public void testSum() {
 		int result = arOperations.sum(3, 4);
-
+		System.out.println("Result of Overriden function sum(3, 4) is :- " + result);
 		assertEquals(7, result);
 	}
 
@@ -40,7 +40,7 @@ public class ArithmaticOperationsTest
 	public void testDivison() {
 		try {
 			int result = arOperations.divison(10, 2);
-
+			System.out.println("Result of Overriden function divison(10, 2) is :- " + result);
 			assertEquals(5, result);
 		} catch (Exception e) {
 			e.printStackTrace(System.err);
@@ -50,13 +50,14 @@ public class ArithmaticOperationsTest
 	@Test(expected = Exception.class)
 	public void testDivisionException() throws Exception {
 		arOperations.divison(10, 0);
+		
 	}
 
 	@Ignore
 	@Test
 	public void testEqual() {
 		boolean result = arOperations.equalIntegers(20, 20);
-
+		System.out.println("Result of Overriden function arOperations.equalIntegers(20, 20) is :- " + result);
 		assertFalse(result);
 	}
 
