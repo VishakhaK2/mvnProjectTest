@@ -34,7 +34,7 @@ public class ArithmaticOperationsTest
 		int result = arOperations.sum(3, 4);
 		System.out.println("Result of Overriden function sum(3, 4) is :- " + result);
 		
-		System.out.println("Made the new changes");
+		System.out.println("Made the changes");
 		assertEquals(7, result);
 	}
 
